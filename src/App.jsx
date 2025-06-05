@@ -1,19 +1,16 @@
 import Header from "./Header"
+import Login,{Profile,Setting} from "./UserComponent";
 function App(){
 return (
   <div>
     <Header/>
     <h1>Hello React</h1>
     <h1>Kill the Code</h1>
-    <Fruit/>
+    <Login/>
+    <Profile/>
+    <Setting/>
   </div>
 )
 }
-function Fruit(){
-  return (
-  <div>
-    <h1>Apple</h1>
-  </div>
-)
-}
+
 export default App;
