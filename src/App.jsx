@@ -1,15 +1,10 @@
-import Header from "./Header"
-import Login,{Profile,Setting,User_key} from "./UserComponent";
+
+import ToDo from "./ToDo";
 function App(){
 return (
   <div>
-    <Header/>
-    <h1>Hello React</h1>
-    <h1>Kill the Code</h1>
-    <Login/>
-    <Profile/>
-    <Setting/>
-    <h3>{User_key}</h3>
+    <h1>Sumit Todos</h1>
+    <ToDo/>
   </div>
 )
 }
