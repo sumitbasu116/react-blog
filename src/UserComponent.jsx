@@ -24,3 +24,5 @@ export function Setting(){
 }
 
 export default Login;
+
+export const User_key = "%$!$@%#&#*";
