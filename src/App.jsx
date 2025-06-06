@@ -1,5 +1,6 @@
 import User from "./User";
-
+import Student from "./Student";
+import { useState } from "react";
 function App(){
 let college=['NIT','BUT','WBUT','IIT','MIT'];
 let userObj1 ={
@@ -20,10 +21,12 @@ let userObj3 ={
   email : 'anil@gmail.com',
   college: college[2]
 };
-
+const [student,setStudent] = useState();
 return (
   <div>
     <h1>React JS Props</h1>
+    {student && <Student name={student}/>}
+    <button onClick={()=>setStudent('Bhaskar')}>Add Student</button>
     < User user={userObj1}/>
     < User user={userObj2}/>
     < User user={userObj3}/>
