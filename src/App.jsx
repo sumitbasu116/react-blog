@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import Counter from "./Counter";
 
 function App(){
 let [fruit,setFruit] = useState("Apple");
@@ -11,6 +11,7 @@ return (
     <h1>React JS State</h1>
     <h2>{fruit}</h2>
     <button onClick={handleFruit}>change fruit</button>
+    <Counter/>
   </div>
 )
 }
