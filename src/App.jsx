@@ -1,17 +1,11 @@
-import { useState } from "react";
-import Counter from "./Counter";
+import User from "./User";
 
 function App(){
-let [fruit,setFruit] = useState("Apple");
-let handleFruit = ()=>{
-  setFruit("Banana");
-};
+
 return (
   <div>
-    <h1>React JS State</h1>
-    <h2>{fruit}</h2>
-    <button onClick={handleFruit}>change fruit</button>
-    <Counter/>
+    <h1>React JS Props</h1>
+    < User name="Sumit Basu" age='32'/>
   </div>
 )
 }
