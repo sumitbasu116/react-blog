@@ -1,13 +1,14 @@
-
+import { useState } from "react";
 function App(){
-
+const[val,setVal] = useState('Sumit Basu');
 return (
   <div>
     <h1>React JS Get Input Field Value</h1>
-    <input type="text" onChange={(event)=>alert(event.target.value)}/>
+    <input type="text" onChange={(event)=>setVal(event.target.value)}/>
     <br />
     <br />
-    <button >Clear Text</button>
+    <h2>{val}</h2>
+    <button onClick={()=>setVal("")}>Clear Text</button>
   </div>
 )
 }
