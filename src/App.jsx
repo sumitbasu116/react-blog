@@ -5,13 +5,15 @@ function App(){
 return (
   <div>
     <h1>React JS Props</h1>
-    <Wrapper >
+    <Wrapper color='blue'>
       <h2>Hello Sumit</h2>
-      
     </Wrapper>
     <Wrapper>
       <h3>Hello Admin</h3>
       <h3 style={{color:'red'}}>Please Login</h3>
+    </Wrapper>
+    <Wrapper color="orange">
+      <h2>Hello Bhaskar</h2>
     </Wrapper>
   </div>
 )
