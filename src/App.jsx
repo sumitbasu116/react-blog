@@ -2,6 +2,7 @@ import { useState } from "react";
 import Skills from "./Skills";
 function App(){
   const[gender,setGender] = useState('male');
+  const[city,setCity] = useState('delhi');
 return (
   <div>
     <h1>Handle Radio Button and Dropdown</h1>
@@ -13,6 +14,13 @@ return (
     checked={gender=='female'}/>
     <label htmlFor="female">Female</label>
     <h3>Selected Gender:{gender}</h3>
+    <h4>Select City:</h4>
+    <select onChange={(event)=>setCity(event.target.value)}>
+      <option value="delhi">Delhi</option>
+      <option value="kolkata">Kolkata</option>
+      <option value="mumbai">Mumbai</option>
+    </select>
+     <h3>Selected City:{city}</h3>
   </div>
 )
 }
