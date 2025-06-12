@@ -1,3 +1,4 @@
+import User from "./User";
 
 function App() {
   const userData = [
@@ -29,31 +30,15 @@ function App() {
   return (
     <div>
       <h1>Loop in JSX with Map Function</h1>
-      <table border='1'>
-        <thead>
-          <tr>
-            <td>ID</td>
-            <td>NAME</td>
-            <td>EMAIL</td>
-            <td>AGE</td>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            userData.map(
-              (user) => (
-                <tr key={user.id}>
-                  <td>{user.id}</td>
-                  <td>{user.name}</td>
-                  <td>{user.email}</td>
-                  <td>{user.age}</td>
-                </tr>
-              )
-            )
-          }
-        </tbody>
-      </table>
-
+      {
+        userData.map(
+          (user)=>(
+            <div key={user.id}>
+            <User />
+            </div>
+          )
+        )
+      }
     </div>
   )
 }

@@ -1,8 +1,7 @@
-function User({name='New User'}){
-
+function User(){
     return(
         <div>
-            <h3>Hi, {name}</h3>
+            <h3>User Component</h3>
         </div>
     );
 }
