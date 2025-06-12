@@ -34,7 +34,7 @@ function App() {
         userData.map(
           (user)=>(
             <div key={user.id}>
-            <User />
+            <User user={user}/>
             </div>
           )
         )
