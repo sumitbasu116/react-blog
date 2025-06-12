@@ -1,46 +1,77 @@
-import User from "./User";
-
+import College from "./College";
 function App() {
-  const userData = [
+  const collegeData = [
     {
-      name: 'Sumit',
-      age: 32,
-      email: 'sumit@test.com',
-      id: 1
+      name: 'SIT',
+      website: 'www.sit.com',
+      city: 'Tumkur',
+      student: [
+        {
+          name: 'Sumit',
+          age: 21,
+          email: 'sumit@abc.com'
+        },
+        {
+          name: 'Anil',
+          age: 22,
+          email: 'anil@abc.com'
+        },
+        {
+          name: 'Sakhshi',
+          age: 20,
+          email: 'sakhshi@abc.com'
+        }
+      ]
     },
     {
-      name: 'Amit',
-      age: 42,
-      email: 'amit@test.com',
-      id: 2
+      name: 'KIT',
+      website: 'www.kit.com',
+      city: 'Gubbi',
+      student: [
+        {
+          name: 'Sumit',
+          age: 21,
+          email: 'sumit@abc.com'
+        },
+        {
+          name: 'Anil',
+          age: 22,
+          email: 'anil@abc.com'
+        },
+        {
+          name: 'Sakhshi',
+          age: 20,
+          email: 'sakhshi@abc.com'
+        }
+      ]
     },
     {
-      name: 'Arit',
-      age: 22,
-      email: 'arit@test.com',
-      id: 3
-    },
-    {
-      name: 'Sunil',
-      age: 52,
-      email: 'sunil@test.com',
-      id: 4
+      name: 'IIIT',
+      website: 'www.iiit.com',
+      city: 'Bengalore',
+      student: [
+        {
+          name: 'Sumit',
+          age: 21,
+          email: 'sumit@abc.com'
+        },
+        {
+          name: 'Anil',
+          age: 22,
+          email: 'anil@abc.com'
+        },
+        {
+          name: 'Sakhshi',
+          age: 20,
+          email: 'sakhshi@abc.com'
+        }
+      ]
     }
-  ];
+  ]
   return (
     <div>
-      <h1>Loop in JSX with Map Function</h1>
-      {
-        userData.map(
-          (user)=>(
-            <div key={user.id}>
-            <User user={user}/>
-            </div>
-          )
-        )
-      }
+      <College college={collegeData}/>
     </div>
   )
 }
-
 export default App;

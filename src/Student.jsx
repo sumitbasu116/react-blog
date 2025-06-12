@@ -1,8 +1,16 @@
 
-function Student({name}){
+function Student({data}){
     return(
-        <div>
-            <h1>Student Name: {name}</h1>
+        <div style={{
+            backgroundColor:'#ffff',
+            margin:'10px',
+            padding:'5px',
+            borderRadius:'10px',
+            border:'2px solid green'
+        }}>
+            <h5>{data.name}</h5>
+            <h5>{data.age}</h5>
+            <h5>{data.email}</h5>
         </div>
     );
 }
