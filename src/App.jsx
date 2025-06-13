@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useState } from "react";
 
 function App() {
@@ -6,7 +7,12 @@ function App() {
   function callOnce(){
     console.log('callOnce function called');
   }
-  callOnce();
+  useEffect(
+    ()=>{
+      callOnce();
+    }
+  )
+  
   return (
     <div>
       <h1>useEffect hook</h1>
