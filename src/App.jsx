@@ -1,31 +1,15 @@
-import { useEffect } from "react";
 import { useState } from "react";
+import Counter from "./Counter";
 
-function App() {
+function App() {  
 
   const[counter,setCounter] = useState(0);
-  const[data,setData] = useState(1); 
-  function callOnce(){
-    console.log('callOnce function called');
-  }
-  useEffect(
-    ()=>{
-      callOnce();
-    },[]
-  )
-  useEffect(
-    ()=>{
-      counterFunction();
-    },[counter]
-  )
-  function counterFunction(){
-    console.log('counterFunction function called');
-  }
+
   return (
     <div>
-      <h1>useEffect hook</h1>
-      <button onClick={()=>setCounter(counter+1)}>Count{counter}</button>
-      <button onClick={()=>setData(data+1)}>Data{data}</button>
+      
+      <Counter data={counter}/>
+      <button onClick={()=>setCounter(counter+1)}>Counter</button>
     </div>
   )
 }
