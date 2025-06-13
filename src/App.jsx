@@ -1,15 +1,19 @@
-import { useState } from "react";
-import Counter from "./Counter";
 
+import { useState } from "react";
+import DigitalClock from "./DigitalClock";
 function App() {  
 
-  const[counter,setCounter] = useState(0);
+  const[color,setColor] = useState('green');
 
   return (
     <div>
+      <select onChange={(event)=>setColor(event.target.value)}>
+        <option value="green">Green</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+      </select>
+      <DigitalClock color={color}/>
       
-      <Counter data={counter}/>
-      <button onClick={()=>setCounter(counter+1)}>Counter</button>
     </div>
   )
 }
