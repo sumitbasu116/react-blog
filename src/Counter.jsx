@@ -8,6 +8,9 @@ function Counter({data,counter}){
     function handleCounting(){
         console.log("Updating...");
     }
+    function handleUnmounting(){
+        console.log("Unmounting...");
+    }
     useEffect(
         ()=>{
             handleMounting();
@@ -18,6 +21,12 @@ function Counter({data,counter}){
             handleCounting();
         },[counter]
     )
+    useEffect(
+        ()=>{
+            return ()=>{
+                handleUnmounting();
+            }
+        },[])
     
     return (
         <div>
