@@ -9,7 +9,7 @@ function Counter({data}){
     useEffect(
         ()=>{
             handleCounter();
-        },[]
+        },[data]
     )
     
     return (
