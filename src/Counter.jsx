@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 
 function Counter({data}){
 
@@ -5,7 +6,12 @@ function Counter({data}){
         console.log("handleCounter called");
         
     }
-    handleCounter();
+    useEffect(
+        ()=>{
+            handleCounter();
+        },[]
+    )
+    
     return (
         <div>
             <h3>Counter Value:{data}</h3>
