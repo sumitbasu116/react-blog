@@ -1,20 +1,28 @@
 import { useEffect } from "react";
 
-function Counter({data}){
+function Counter({data,counter}){
 
-    function handleCounter(){
-        console.log("handleCounter called");
-        
+    function handleMounting(){
+        console.log("Mounting...");
+    }
+    function handleCounting(){
+        console.log("Updating...");
     }
     useEffect(
         ()=>{
-            handleCounter();
-        },[data]
+            handleMounting();
+        },[]
+    );
+    useEffect(
+        ()=>{
+            handleCounting();
+        },[counter]
     )
     
     return (
         <div>
-            <h3>Counter Value:{data}</h3>
+            <h3>Counter Value:{counter}</h3>
+            <h3>Data Value:{data}</h3>
         </div>
     );
 
