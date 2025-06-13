@@ -1,76 +1,16 @@
-import College from "./College";
+import { useState } from "react";
+
 function App() {
-  const collegeData = [
-    {
-      name: 'SIT',
-      website: 'www.sit.com',
-      city: 'Tumkur',
-      student: [
-        {
-          name: 'Sumit',
-          age: 21,
-          email: 'sumit@abc.com'
-        },
-        {
-          name: 'Anil',
-          age: 22,
-          email: 'anil@abc.com'
-        },
-        {
-          name: 'Sakhshi',
-          age: 20,
-          email: 'sakhshi@abc.com'
-        }
-      ]
-    },
-    {
-      name: 'KIT',
-      website: 'www.kit.com',
-      city: 'Gubbi',
-      student: [
-        {
-          name: 'Sumit',
-          age: 21,
-          email: 'sumit@abc.com'
-        },
-        {
-          name: 'Anil',
-          age: 22,
-          email: 'anil@abc.com'
-        },
-        {
-          name: 'Sakhshi',
-          age: 20,
-          email: 'sakhshi@abc.com'
-        }
-      ]
-    },
-    {
-      name: 'IIIT',
-      website: 'www.iiit.com',
-      city: 'Bengalore',
-      student: [
-        {
-          name: 'Sumit',
-          age: 21,
-          email: 'sumit@abc.com'
-        },
-        {
-          name: 'Anil',
-          age: 22,
-          email: 'anil@abc.com'
-        },
-        {
-          name: 'Sakhshi',
-          age: 20,
-          email: 'sakhshi@abc.com'
-        }
-      ]
-    }
-  ]
+
+  const[counter,setCounter] = useState(0); 
+  function callOnce(){
+    console.log('callOnce function called');
+  }
+  callOnce();
   return (
     <div>
-      <College college={collegeData}/>
+      <h1>useEffect hook</h1>
+      <button onClick={()=>setCounter(counter+1)}>Count{counter}</button>
     </div>
   )
 }
