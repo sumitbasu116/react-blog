@@ -10,6 +10,11 @@ function App() {
   }
   useEffect(
     ()=>{
+      callOnce();
+    },[]
+  )
+  useEffect(
+    ()=>{
       counterFunction();
     },[counter]
   )
