@@ -10,10 +10,12 @@ function App() {
   }
   useEffect(
     ()=>{
-      callOnce();
-    },[counter,data]
+      counterFunction();
+    },[counter]
   )
-  
+  function counterFunction(){
+    console.log('counterFunction function called');
+  }
   return (
     <div>
       <h1>useEffect hook</h1>
