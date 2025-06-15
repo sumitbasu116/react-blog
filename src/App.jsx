@@ -29,26 +29,26 @@ function App() {
       <button onClick={() => updateTheme('white', 'black')}>Default</button>
       <div style={{ display: 'flex', flexWrap: 'wrap' }}>
 
-        <div style={cardstyle}>
+        <div style={{...cardstyle,color:textColor}}>
           <h2>Dynamic and Conditional Inline Style</h2>
           <img style={{
             width: '100px',
             borderRadius: '10px',
             margin: '5px'
           }} src="https://www.w3schools.com/howto/img_avatar.png" alt="" />
-          <div style={{ padding: '5px',color:textColor}}>
+          <div style={{ padding: '5px'}}>
             <h4>Software Developer</h4>
             <p>Sumit Basu</p>
           </div>
         </div>
-        <div style={cardstyle}>
+        <div style={{...cardstyle,color:textColor}}>
           <h2>Inline Style in React</h2>
           <img style={{
             width: '100px',
             borderRadius: '10px',
             margin: '5px'
           }} src="https://www.w3schools.com/howto/img_avatar.png" alt="" />
-          <div style={{ padding: '5px',color:textColor}}>
+          <div style={{ padding: '5px'}}>
             <h4>Software Developer</h4>
             <p>Sumit Basu</p>
           </div>
