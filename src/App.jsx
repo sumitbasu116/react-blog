@@ -1,22 +1,23 @@
-import { useState } from "react";
-import Counter from "./Counter";
+
 
 
 function App() {  
 
-  const[counter,setCounter]=useState(0);
-  const[data,setData]=useState(0);
-  const[display,setDisplay]=useState(true);
+
 
   return (
-    <div>
-    
-    {
-      display?<Counter data={data} counter={counter}/>:null
-    }
-    <button onClick={()=>setCounter(counter+1)}>Counter</button>
-    <button onClick={()=>setData(data+1)}>Data</button>
-    <button onClick={()=>setDisplay(!display)}>Toggle</button>
+    <div style={{border: '1px solid #483131',
+    backgroundColor: 'cadetblue',
+    borderRadius: '10px',
+    width: '500px',
+    margin: '2px',boxShadow: '2px 5px 5px #766d6d',
+    paddingLeft: '50px'}}>
+      <h2 style={{color:'#3F51B5'}}>Inline Style in React</h2>
+    <img style={{width: '200px',
+    borderRadius: '10px',
+    margin: '5px'}} src="https://www.w3schools.com/howto/img_avatar.png" alt="" />
+    <h4>Software Developer</h4>
+    <p>Sumit Basu</p>
     </div>
   )
 }
