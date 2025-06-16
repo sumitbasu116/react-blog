@@ -10,7 +10,9 @@ function App() {
       paddingLeft: '50px'
     }
   )
-
+  const imageStyle={width: '100px',
+            borderRadius: '10px',
+            margin: '5px'};
   const updateTheme = (bgColor, textColor) => {
     setCardstyle(
       {
@@ -22,20 +24,50 @@ function App() {
 
   const [textColor, setTextColor] = useState('black');
 
+  const[grid,toggleGrid] = useState(true);
 
   return (
     <>
       <button onClick={() => updateTheme('cadetblue', '#3F51B5')}>Custom</button>
       <button onClick={() => updateTheme('white', 'black')}>Default</button>
-      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+      <button onClick={() => toggleGrid(!grid)}>Toogle Grid</button>
+      <div style={{ display: grid?'flex':'block', flexWrap: 'wrap' }}>
 
         <div style={{...cardstyle,color:textColor}}>
           <h2>Dynamic and Conditional Inline Style</h2>
-          <img style={{
-            width: '100px',
-            borderRadius: '10px',
-            margin: '5px'
-          }} src="https://www.w3schools.com/howto/img_avatar.png" alt="" />
+          <img style={imageStyle} src="https://www.w3schools.com/howto/img_avatar.png" alt="" />
+          <div style={{ padding: '5px'}}>
+            <h4>Software Developer</h4>
+            <p>Sumit Basu</p>
+          </div>
+        </div>
+        <div style={{...cardstyle,color:textColor}}>
+          <h2>Dynamic and Conditional Inline Style</h2>
+          <img style={imageStyle} src="https://www.w3schools.com/howto/img_avatar.png" alt="" />
+          <div style={{ padding: '5px'}}>
+            <h4>Software Developer</h4>
+            <p>Sumit Basu</p>
+          </div>
+        </div>
+        <div style={{...cardstyle,color:textColor}}>
+          <h2>Dynamic and Conditional Inline Style</h2>
+          <img style={imageStyle} src="https://www.w3schools.com/howto/img_avatar.png" alt="" />
+          <div style={{ padding: '5px'}}>
+            <h4>Software Developer</h4>
+            <p>Sumit Basu</p>
+          </div>
+        </div>
+        <div style={{...cardstyle,color:textColor}}>
+          <h2>Dynamic and Conditional Inline Style</h2>
+          <img style={imageStyle} src="https://www.w3schools.com/howto/img_avatar.png" alt="" />
+          <div style={{ padding: '5px'}}>
+            <h4>Software Developer</h4>
+            <p>Sumit Basu</p>
+          </div>
+        </div>
+        <div style={{...cardstyle,color:textColor}}>
+          <h2>Dynamic and Conditional Inline Style</h2>
+          <img style={imageStyle} src="https://www.w3schools.com/howto/img_avatar.png" alt="" />
           <div style={{ padding: '5px'}}>
             <h4>Software Developer</h4>
             <p>Sumit Basu</p>
@@ -43,11 +75,7 @@ function App() {
         </div>
         <div style={{...cardstyle,color:textColor}}>
           <h2>Inline Style in React</h2>
-          <img style={{
-            width: '100px',
-            borderRadius: '10px',
-            margin: '5px'
-          }} src="https://www.w3schools.com/howto/img_avatar.png" alt="" />
+          <img style={imageStyle} src="https://www.w3schools.com/howto/img_avatar.png" alt="" />
           <div style={{ padding: '5px'}}>
             <h4>Software Developer</h4>
             <p>Sumit Basu</p>
