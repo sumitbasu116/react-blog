@@ -4,10 +4,18 @@ function App() {
 
 
   return (
-    <>
-      <h1 className='heading'>Style with CSS Modules</h1>
+    <div className='container'>
       <UserProfile/>
-    </>
+      <UserProfile/>
+      <UserProfile/>
+      <UserProfile/>
+      <UserProfile/>
+      <UserProfile/>
+      <UserProfile/>
+      <UserProfile/>
+      <UserProfile/>
+      <UserProfile/>
+    </div>
   )
 }
 export default App;
