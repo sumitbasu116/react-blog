@@ -16,3 +16,7 @@
 .text-wrap{
     padding: 10px;
 }
+
+.container{
+    display: flex;
+}
