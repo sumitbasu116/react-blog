@@ -1,34 +1,27 @@
-import styled from "styled-components";
+import {Button} from 'react-bootstrap';
+import {Dropdown} from 'react-bootstrap';
 function App() {
-
-  const Heading=styled.h2(
-    {
-      color:'red',
-      border:'1px solid green',
-      borderRadius:'5px',
-      margin:'20px',
-      padding:'10px'
-    }
-  )
-  const ButtonSt=styled.button`
-  color:red;
-  width:100px;
-  height:30px;
-  margin: 20px
-  `
 
   return (
     <div>
-      <h1>Styled components</h1>
-      <Heading>Hello Style Component 1</Heading>
-      <Heading>Hello Style Component 2</Heading>
-      <Heading>Hello Style Component 3</Heading>
-      <Heading>Hello Style Component 4</Heading>
-      <Heading>Hello Style Component 5</Heading>
-      <Heading>Hello Style Component 6</Heading>
-      <ButtonSt>Login</ButtonSt>
-      <ButtonSt>Register</ButtonSt>
-      <ButtonSt>Back</ButtonSt>
+      <h2>Add Bootstrap with React js</h2>
+      <Button>Ok</Button>
+      <Button variant='danger'>Ok</Button>
+      <Button variant='success'>Ok</Button>
+      <Button variant="outline-success">Success</Button>
+      <br />
+      <br />
+      <Dropdown>
+      <Dropdown.Toggle variant="success" id="dropdown-basic">
+        Dropdown Button
+      </Dropdown.Toggle>
+
+      <Dropdown.Menu>
+        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
     </div>
   )
 }
