@@ -1,3 +1,18 @@
-.heading{
+.heading {
     color: blue;
+}
+
+.card {
+    width: 200px;
+    border: 1px solid #ddd;
+    box-shadow: 1px 1px 1px 1px #ddd;
+    margin: 10px;
+}
+
+.imgStyle {
+    width: 200px;
+}
+
+.textWrap{
+    padding: 10px;
 }
