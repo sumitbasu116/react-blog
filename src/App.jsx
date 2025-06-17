@@ -19,13 +19,18 @@ function App() {
       inputRef.current.style.display='inline';
     }
   }
-
+const h1Ref = useRef(null);
+const h1RefHandler=()=>{
+  h1Ref.current.style.color='green';
+}
   return (
     <div>
       <h1>useRef Hook</h1>
       <button onClick={toggleHandler}>Toggle</button>
       <input ref={inputRef} type="text" placeholder='Enter user name'/>
       <button onClick={inputHandler}>Focus on Input Field</button>
+      <h1 ref={h1Ref}>Hello, Sumit Basu</h1>
+      <button onClick={h1RefHandler}>Hello</button>
     </div>
   )
 }
