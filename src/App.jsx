@@ -6,7 +6,10 @@ function App() {
 
   const inputHandler=()=>{
     console.log(inputRef);
-    
+    inputRef.current.focus();
+    inputRef.current.style.color='red';
+    inputRef.current.placeholder='Enter Password';
+    inputRef.current.value=123;
   }
 
   return (
