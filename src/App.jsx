@@ -20,7 +20,7 @@ function App() {
         <input type="text" placeholder="Enter Password"/>
         <br />
         <br />
-        <button disabled={pending}>Submit</button>
+        <button disabled={pending}>{pending?'Submitting...':'Submit'}</button>
       </div>
     )
   }
