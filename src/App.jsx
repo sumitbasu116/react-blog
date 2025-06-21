@@ -1,6 +1,6 @@
 
 import { useRef } from "react";
-
+import UserInput from "./UserInput";
 function App() {
   
   const inputRef = useRef(null);
@@ -12,7 +12,7 @@ function App() {
   
   return (
     <div>
-      <input type="text" ref={inputRef}/>
+      <UserInput/>
       <br /><br />
       <button onClick={handleInput}>Set Input</button>
     </div>
