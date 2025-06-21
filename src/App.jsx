@@ -13,7 +13,6 @@ function App() {
   return (
     <div>
       <UserInput ref={inputRef}/>
-      <br /><br />
       <button onClick={handleInput}>Set Input</button>
     </div>
   )
