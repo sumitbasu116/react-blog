@@ -1,9 +1,9 @@
 
 function App() {
 
-  const handleForm=()=>{
+  const handleForm=async ()=>{
     console.log("Hello");
-    new Promise(res=>setTimeout(res,2000))
+    await new Promise(res=>setTimeout(res,2000))
   }
   
   return (
