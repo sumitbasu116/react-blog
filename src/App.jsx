@@ -1,19 +1,18 @@
 
-import { useRef } from "react";
-import UserInput from "./UserInput";
 function App() {
-  
-  const inputRef = useRef(null);
 
-  const handleInput=()=>{
-    inputRef.current.value=100;
-    inputRef.current.focus()
+  const handleForm=()=>{
+    console.log("Hello");
+    
   }
   
   return (
     <div>
-      <UserInput ref={inputRef}/>
-      <button onClick={handleInput}>Set Input</button>
+      <form action={handleForm}>
+        <input type="text" placeholder="Enter Your Name"/>
+        <input type="text" placeholder="Enter Password"/>
+        <button>Submit</button>
+      </form>
     </div>
   )
 }
