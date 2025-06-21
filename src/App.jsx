@@ -1,4 +1,6 @@
 
+import { useFormStatus } from "react-dom";
+
 function App() {
 
   const handleForm=async ()=>{
@@ -7,6 +9,9 @@ function App() {
   }
   
   const CustomerForm=()=>{
+    const {pending}=useFormStatus(null);
+    console.log(pending);
+    
     return(
       <div>
         <input type="text" placeholder="Enter Your Name"/>
@@ -15,6 +20,7 @@ function App() {
         <input type="text" placeholder="Enter Password"/>
         <br />
         <br />
+        <button disabled={pending}>Submit</button>
       </div>
     )
   }
@@ -23,7 +29,6 @@ function App() {
     <div>
       <form action={handleForm}>
         <CustomerForm/>
-        <button>Submit</button>
       </form>
     </div>
   )
