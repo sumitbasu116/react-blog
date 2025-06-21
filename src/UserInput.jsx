@@ -1,7 +1,7 @@
-function UserInput(){
+function UserInput(props){
     return(
         <div>
-            <input type="text" />
+            <input type="text" ref={props.ref}/>
         </div>
     )
 }
