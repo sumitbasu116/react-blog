@@ -1,24 +1,21 @@
 
-import User from "./User";
+import { useRef } from "react";
+
 function App() {
   
-  const displayName=(name)=>{
-    alert(name);
-  }
+  const inputRef = useRef(null);
 
-  const getName=(name)=>{
-    alert(name);
+  const handleInput=()=>{
+    inputRef.current.value=100;
+    inputRef.current.focus()
   }
-
+  
   return (
     <div>
-      <h1>Pass Function in Component as Props</h1>
-      <User displayName={displayName} name='Sumit' getName={getName}/>
-      <User displayName={displayName} name='Samhita' getName={getName}/>
-      <User displayName={displayName} name='Rai' getName={getName}/>
-      <User displayName={displayName} name='Amit' getName={getName}/>
+      <input type="text" ref={inputRef}/>
+      <br /><br />
+      <button onClick={handleInput}>Set Input</button>
     </div>
-    
   )
 }
 export default App;
