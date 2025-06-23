@@ -3,12 +3,12 @@ import { useState } from "react";
 
 function App() {
 
-  const [pending,setPending] = useState(null);
+  const [pending,setPending] = useState(false);
 
-  const handleButton=()=>{
+  const handleButton=async ()=>{
     setPending(true);
     //big logic execution which takes 2sec
-
+    await new Promise(res=>setTimeout(res,2000))
     setPending(false);
   }
 
