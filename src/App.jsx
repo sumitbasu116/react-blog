@@ -1,15 +1,19 @@
-import { useState } from "react";
+import { useTransition } from "react";
+
 
 
 function App() {
 
-  const [pending,setPending] = useState(false);
+  const [pending,startTransition] = useTransition();
+
 
   const handleButton=async ()=>{
-    setPending(true);
-    //big logic execution which takes 2sec
-    await new Promise(res=>setTimeout(res,2000))
-    setPending(false);
+    startTransition(
+     async ()=>{
+          //big logic execution which takes 2sec
+          await new Promise(res=>setTimeout(res,2000))
+      }
+    )
   }
 
   return (
