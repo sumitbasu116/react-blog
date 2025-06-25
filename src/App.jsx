@@ -1,29 +1,27 @@
-import { useTransition } from "react";
-
-
+import { useState } from "react";
 
 function App() {
 
-  const [pending,startTransition] = useTransition();
-
-
-  const handleButton=async ()=>{
-    startTransition(
-     async ()=>{
-          //big logic execution which takes 2sec
-          await new Promise(res=>setTimeout(res,2000))
-      }
-    )
-  }
+const [users,serUsers]=useState([]);
+const [user,setUser]=useState('');
+const handleAddUsers=()=>{
+  serUsers([...users,user]);
+}
 
   return (
     <div>
-      <h1>useTransition Hook</h1>
+      <h2>Total User:{}</h2>
+      <h2>Last User:{}</h2>
+      <h2>Total Unique User:{}</h2>
+      <input type="text" onChange={(event)=>setUser(event.target.value)} placeholder="Add New User"/>
+      <button onClick={handleAddUsers}>Add User</button>
       {
-        pending?
-        <img style={{width:'100px'}} src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" alt="" />:null
+        users.map(
+          (item,index)=>(
+            <h4 key={index}>{item}</h4>
+          )
+        )
       }
-      <button disabled={pending} onClick={handleButton}>Click</button>
     </div>
   )
 }
