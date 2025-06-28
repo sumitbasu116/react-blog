@@ -20,11 +20,15 @@ function App() {
     borderRadius: '5px'
   }
 
+  function handleNameUpdate(val){
+    console.log(val);
+  }
+
   return (
     <div>
       <h1>Updating Objects in State</h1>
 
-      <input type="text" placeholder="Update Name"/>
+      <input type="text" placeholder="Update Name" onChange={(event)=>handleNameUpdate(event.target.value)}/>
       <div style={divStyle}>
         <p>Name: {data.name}</p>
         <p>Name: {data.address.city}</p>
