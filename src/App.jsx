@@ -22,7 +22,7 @@ function App() {
 
   function handleNameUpdate(val){
     data.name=val;
-
+    setData(data);
     console.log(data);
   }
 
