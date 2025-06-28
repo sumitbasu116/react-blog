@@ -1,12 +1,13 @@
 import AddUser from "./AddUser";
 import DisplayUser from "./DisplayUser";
+import { useState } from "react"
 function App() {
-
+const [user,setUser] = useState('');
   return (
     <div>
-      <AddUser/>
+      <AddUser addUser={setUser}/>
       <hr />
-      <DisplayUser/>
+      <DisplayUser user={user}/>
     </div>
   )
 }

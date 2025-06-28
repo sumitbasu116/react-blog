@@ -1,7 +1,7 @@
-function DisplayUser(){
+function DisplayUser({user}){
     return(
         <div>
-            <h3>Display User</h3>
+            <h3>{user}</h3>
         </div>
     )
 }
