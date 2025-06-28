@@ -24,12 +24,19 @@ function App() {
     data.name=val;
     setData({...data});
   }
+ function handleCityUpdate(city){
+    data.address.city=city;
+    console.log(data);
+    setData({...data});
+  }
 
   return (
     <div>
       <h1>Updating Objects in State</h1>
 
       <input type="text" placeholder="Update Name" onChange={(event)=>handleNameUpdate(event.target.value)}/>
+      <br />
+      <input type="text" placeholder="Update City" onChange={(event)=>handleCityUpdate(event.target.value)}/>
       <div style={divStyle}>
         <p>Name: {data.name}</p>
         <p>Name: {data.address.city}</p>
