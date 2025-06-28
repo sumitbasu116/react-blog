@@ -25,9 +25,10 @@ function App() {
     setData({...data});
   }
  function handleCityUpdate(city){
-    data.address.city=city;
+    let tempAddress=data.address;
+    tempAddress.city=city;
     console.log(data);
-    setData({...data});
+    setData({...data,address:{...tempAddress}});
   }
 
   return (
