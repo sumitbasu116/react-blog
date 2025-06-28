@@ -21,7 +21,9 @@ function App() {
   }
 
   function handleNameUpdate(val){
-    console.log(val);
+    data.name=val;
+
+    console.log(data);
   }
 
   return (
