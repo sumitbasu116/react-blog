@@ -21,9 +21,9 @@ function App() {
     <div>
       <h1>useActionState Hook</h1>
       <form action={action}>
-        <input type="text" placeholder="Enter Your Name" name="name" />
+        <input type="text" defaultValue={data?.name} placeholder="Enter Your Name" name="name" />
         <br />
-        <input type="password" placeholder="Enter Your Password" name="password" />
+        <input type="password" defaultValue={data?.password} placeholder="Enter Your Password" name="password" />
         <br /><br />
         <button disabled={pending}>Submit Data</button>
         <br />
