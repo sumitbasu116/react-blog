@@ -1,5 +1,14 @@
-
+import { useActionState } from "react";
 function App() {
+
+  function handleFormSubmit(previousData,formData){
+    let name =formData.get('name');
+    let password = formData.get('password');
+
+    console.log(name,password);
+    
+  }
+  const [data,action,pending] = useActionState(handleFormSubmit,undefined);
 
   return (
     <div>
