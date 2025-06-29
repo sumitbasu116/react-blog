@@ -8,7 +8,11 @@ function App() {
 
     await new Promise(res=>setTimeout(res,2000));
 
-    console.log(name,password);
+    if(name && password){
+      return {message: 'Data Submitted'}
+    } else{
+      return {error: 'Error in Data input'}
+    }
     
   }
   const [data,action,pending] = useActionState(handleFormSubmit,undefined);
@@ -22,6 +26,13 @@ function App() {
         <input type="password" placeholder="Enter Your Password" name="password"/>
         <br /><br />
         <button disabled={pending}>Submit Data</button>
+        <br />
+        {
+          data?.error && <span style={{color:'red'}}>{data.error}</span>
+        }
+        {
+          data?.message && <span style={{color:'green'}}>{data.message}</span>
+        }
       </form>
     </div>
   )
