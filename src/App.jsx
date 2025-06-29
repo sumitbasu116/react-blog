@@ -9,7 +9,7 @@ function App() {
     await new Promise(res => setTimeout(res, 2000));
 
     if (name && password) {
-      return { message: 'Data Submitted' }
+      return { message: 'Data Submitted',name,password }
     } else {
       return { error: 'Error in Data input' }
     }
@@ -33,6 +33,12 @@ function App() {
       }
       {
         data?.message && <span style={{ color: 'green' }}>{data.message}</span>
+      }
+      {
+        data?.name && <h4>Name: {data?.name}</h4>
+      }
+      {
+        data?.password && <h4>Password: {data?.password}</h4>
       }
     </div>
   )
