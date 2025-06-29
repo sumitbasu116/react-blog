@@ -21,7 +21,7 @@ function App() {
         <br />
         <input type="password" placeholder="Enter Your Password" name="password"/>
         <br /><br />
-        <button>Submit Data</button>
+        <button disabled={pending}>Submit Data</button>
       </form>
     </div>
   )
