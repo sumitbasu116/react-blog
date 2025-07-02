@@ -16,17 +16,16 @@ export default App;
 
 function UserForm() {
 
-  const name = useId();
-  const age = useId();
+  const user = useId();
 
   return (
     <div>
       <form action="">
-        <label htmlFor={name}>Enter Name:</label>
-        <input type="text" placeholder="enter your name" id={name}/>
+        <label htmlFor={user+"name"}>Enter Name:</label>
+        <input type="text" placeholder="enter your name" id={user+"name"}/>
         <br /><br />
-        <label htmlFor={age}>Enter Age:</label>
-        <input type="number" placeholder="enter your age" id={age}/>
+        <label htmlFor={user+"age"}>Enter Age:</label>
+        <input type="number" placeholder="enter your age" id={user+"age"}/>
       </form>
     </div>
   )
