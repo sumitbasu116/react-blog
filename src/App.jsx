@@ -1,3 +1,4 @@
+import { useId } from "react";
 
 function App() {
 
@@ -15,14 +16,17 @@ export default App;
 
 function UserForm() {
 
+  const name = useId();
+  const age = useId();
+
   return (
     <div>
       <form action="">
-        <label htmlFor="name">Enter Name:</label>
-        <input type="text" placeholder="enter your name" id="name"/>
+        <label htmlFor={name}>Enter Name:</label>
+        <input type="text" placeholder="enter your name" id={name}/>
         <br /><br />
-        <label htmlFor="age">Enter Age:</label>
-        <input type="number" placeholder="enter your age" id="age"/>
+        <label htmlFor={age}>Enter Age:</label>
+        <input type="number" placeholder="enter your age" id={age}/>
       </form>
     </div>
   )
