@@ -2,12 +2,12 @@ import useToggle from "./useToggle";
 
 function App() {
   
-  const [flag,toggleValue]=useToggle(true);
+  const [flag,setFlag]=useToggle(true);
 
   return (
     <>
-    <button onClick={toggleValue}>Toggle Value</button>
-    <button>Show Value</button>
+    <button onClick={setFlag}>Toggle Value</button>
+    <button onClick={()=>setFlag(true)}>Show Value</button>
     <button>Hide Value</button>
       
     {
