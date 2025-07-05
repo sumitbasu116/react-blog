@@ -8,7 +8,7 @@ function App() {
     <>
     <button onClick={setFlag}>Toggle Value</button>
     <button onClick={()=>setFlag(true)}>Show Value</button>
-    <button>Hide Value</button>
+    <button onClick={()=>setFlag(false)}>Hide Value</button>
       
     {
       flag?<h1>Custom Hooks</h1>:null
