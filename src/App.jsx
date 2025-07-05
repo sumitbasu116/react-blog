@@ -1,11 +1,18 @@
+import useToggle from "./useToggle";
 
 function App() {
+  
+  const [flag,toggleValue]=useToggle(true);
+
   return (
     <>
-    <button>Toggle Value</button>
+    <button onClick={toggleValue}>Toggle Value</button>
     <button>Show Value</button>
     <button>Hide Value</button>
-      <h1>Custom Hooks</h1>
+      
+    {
+      flag?<h1>Custom Hooks</h1>:null
+    }
     </>
   )
 }

@@ -11,6 +11,6 @@ const useToggle = (defaultVal)=>{
             setValue(val);
         }
     }
-    return (value,toggleValue)
+    return [value,toggleValue];
 }
 export default useToggle;
